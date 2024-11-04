@@ -6,6 +6,9 @@ const User = require('./../models/user');
 const bcrypt = require('bcrypt');
 const user = require('./../models/user');
 
+router.get("/hello", (req, res) => res.send("Express on Vercel"));
+
+
 router.post('/signup', (req, res) => {
     let {name, email, password, dateOfBirth} = req.body;
     name = name.trim();
